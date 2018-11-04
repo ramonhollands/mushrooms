@@ -1,0 +1,133 @@
+<table class="wikitable sortable jquery-tablesorter" width="75%">
+<caption>Minder gegeten eetbare paddenstoelensoorten
+</caption>
+<thead><tr>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Oplopend sorteren">Nederlandse naam
+</th>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Oplopend sorteren">Wetenschappelijke naam
+</th></tr></thead><tbody>
+<tr>
+<td><a href="/wiki/Anijschampignon" class="mw-redirect" title="Anijschampignon">Anijschampignon</a>
+</td>
+<td><i>Agaricus arvensis</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Reuzenchampignon" title="Reuzenchampignon">Reuzenchampignon</a>
+</td>
+<td><i>Agaricus augustus</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Appelrussula" title="Appelrussula">Appelrussula</a>
+</td>
+<td><i>Russula paludosa</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Biefstukzwam" title="Biefstukzwam">Biefstukzwam</a>
+</td>
+<td><i>Fistulina hepatica</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Gele_stekelzwam" title="Gele stekelzwam">Gele stekelzwam</a>
+</td>
+<td><i>Hydnum repandum</i> (L.) Fr.
+</td></tr>
+<tr>
+<td><a href="/wiki/Gewone_fopzwam" title="Gewone fopzwam">Gewone fopzwam</a>
+</td>
+<td><i>Laccaria laccata</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Grote_parasolzwam" title="Grote parasolzwam">Grote parasolzwam</a>
+</td>
+<td><i>Macrolepiota procera</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Grote_sponszwam" title="Grote sponszwam">Grote sponszwam</a>
+</td>
+<td><i>Sparassis crispa</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Grote_stinkzwam" title="Grote stinkzwam">Grote stinkzwam</a>
+</td>
+<td><i>Phallus impudicus</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Judasoor" title="Judasoor">Judasoor</a>
+</td>
+<td><i>Auricularia auricula-judae</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Kastanjeboleet" title="Kastanjeboleet">Kastanjeboleet</a>
+</td>
+<td><i>Boletus badius</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Knolparasolzwam" title="Knolparasolzwam">Knolparasolzwam</a>
+</td>
+<td><i>Macrolepiota rhacodes</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Koeienboleet" title="Koeienboleet">Koeienboleet</a>
+</td>
+<td><i>Suillus bovinus</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Paarse_schijnridderzwam" title="Paarse schijnridderzwam">Paarse schijnridderzwam</a>
+</td>
+<td><i>Lepista nuda</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Paarssteelschijnridderzwam" title="Paarssteelschijnridderzwam">Paarssteelschijnridderzwam</a>
+</td>
+<td><i>Lepista saeva</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Parelamaniet" title="Parelamaniet">Parelamaniet</a>
+</td>
+<td><i>Amanita rubescens</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Pruikzwam" title="Pruikzwam">Pruikzwam</a>
+</td>
+<td><i>Hericium erinaceus</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Regenboogrussula" title="Regenboogrussula">Regenboogrussula</a>
+</td>
+<td><i>Russula cyanoxantha</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Reuzenbovist" title="Reuzenbovist">Reuzenbovist</a>
+</td>
+<td><i>Langermannia gigantea</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Roodbruine_slanke_amaniet" title="Roodbruine slanke amaniet">Roodbruine slanke amaniet</a>
+</td>
+<td><i>Amanita fulva</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Voorjaarspronkridder" title="Voorjaarspronkridder">Voorjaarspronkridder</a>
+</td>
+<td><i>Calocybe gambosa</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Weidechampignon" class="mw-redirect" title="Weidechampignon">Weidechampignon</a>
+</td>
+<td><i>Agaricus campestris</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Zwavelzwam" title="Zwavelzwam">Zwavelzwam</a>
+</td>
+<td><i>Laetiporus sulphureus</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Smakelijke_russula" title="Smakelijke russula">Smakelijke russula</a>
+</td>
+<td><i>Russula vesca</i>
+</td></tr>
+<tr>
+<td><a href="/wiki/Zwartwitte_veldridderzwam" title="Zwartwitte veldridderzwam">Zwartwitte veldridderzwam</a>
+</td>
+<td><i>Melanoleuca polioleuca</i>
+</td></tr></tbody><tfoot></tfoot></table>
