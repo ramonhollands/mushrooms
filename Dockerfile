@@ -10,6 +10,7 @@ RUN pip install fastai
 # Install starlette and uvicorn
 RUN pip install starlette uvicorn python-multipart aiohttp
 
+ADD models/3_resnet34_defaults.pth models/3_resnet34_defaults.pth
 ADD predict.py predict.py
 
 # Run it once to trigger resnet download

@@ -11,9 +11,14 @@ import asyncio
 
 from io import BytesIO
 
-path = Path('/Users/ramon/AI/mushrooms')
+# path = Path('/Users/ramon/AI/mushrooms')
+path = Path(".")
 keywords = 'champignon,oesterzwam,gewoon eekhoorntjesbrood'
 classes = keywords.split(',')
+#
+# import os
+# # cwd = os.getcwd()
+# print(os.listdir(path))
 
 data = ImageDataBunch.single_from_classes(path, classes, tfms=get_transforms(), size=224).normalize(imagenet_stats)
 learn = create_cnn(data, models.resnet34, metrics=accuracy)
@@ -57,4 +62,5 @@ def predict_image_from_bytes(bytes):
 
 if __name__ == "__main__":
     if "serve" in sys.argv:
-        uvicorn.run(app, host="0.0.0.0", port=8008)
+        port = int(os.environ.get("PORT", 8008))
+        uvicorn.run(app, host="0.0.0.0", port=port)
