@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hmmm mushroom</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="{{ url_for('static', filename='dropzone.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12" style="background-color: #E8840C; height: 50px;">
+		</div>
+	</div>
+    <div class="row">
+		<div class="col-md-12" style="padding-top: 100px; padding-bottom: 40px;">
+            <center><h2>Check your mushroom!</h2></center>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2">
+		</div>
+		<div class="col-md-8">
+            <div class="results result-box" style="display:none">
+                <span class="result-html"></span>
+            </div>
+			<div class="loading box" style="display:none">
+			<center><img src="{{ url_for('static', filename='loading.gif') }}"><br /><br />checking <br />your mushroom</center>
+			</div>
+			<div class="upload-form">
+				<form action="/upload"
+					class="dropzone"
+					id="my-awesome-dropzone">
+				</form>
+			</div>
+        </div>
+		<div class="col-md-2">
+		</div>
+	</div>
+</div>
+
+<script>
+    Dropzone.options.myAwesomeDropzone = {
+        dictDefaultMessage: 'Drop your mushroom image here',
+        init: function() {
+            this.on("addedfile", function(file) {
+                $('.upload-form').hide();
+                $('.loading').show();
+            });
+        },
+        success: function(file, response){
+            $('.loading').hide();
+            $('.result-html').html(response);
+            $('.results').show();
+            console.log(file);
+        }
+    };
+</script>
+<style>
+    .dropzone.dz-clickable {
+        cursor: pointer;
+    }
+
+.dropzone {
+    height: 300px;
+    border: 2px solid rgba(0,0,0,0.3);
+    background: white;
+    padding: 54px 20px;
+    background-image: url(/static/add_photo_icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px 100px;
+    background-color: #F5F5F5;
+    text-align: center;
+}
+
+.box {
+    height: 300px;
+    border: 2px solid rgba(0,0,0,0.3);
+    background: #F5F5F5;
+    padding: 54px 20px;
+    text-align: center;
+}
+
+.result-box {
+    height: 300px;
+    border: 2px solid rgba(0,0,0,0.3);
+    background: #F5F5F5;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.result-html img {
+    max-height: 200px;
+    max-width: 300px;
+}
+
+
+</style>
+
+</body>
+</html>
+
+
