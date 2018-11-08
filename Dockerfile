@@ -8,8 +8,9 @@ RUN pip install torch_nightly -f https://download.pytorch.org/whl/nightly/cpu/to
 RUN pip install fastai
 RUN pip install Flask
 
-ADD models/3_resnet34_defaults.pth models/3_resnet34_defaults.pth
+ADD models models
 ADD predict.py predict.py
+ADD mushrooms.csv mushrooms.csv
 ADD static static
 ADD templates templates
 
@@ -19,7 +20,7 @@ RUN python predict.py
 EXPOSE 8008
 
 # Start the server
-CMD ["python", "predict.py"]
+CMD ["python", "predict.py", "serve"]
 
 # export FLASK_APP=predict.py
 # flask run --host=0.0.0.0

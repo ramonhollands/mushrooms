@@ -1,0 +1,51 @@
+<div class="container-fluid" style="margin-bottom: 40px;">
+	<div class="row">
+        <div class="col-md-12">
+            <div style="padding: 2px;" class="{{ eatable_class }}">
+                <div class="predict-name-div"><b>Looks like the "{{ latin_name }}"</b></div>
+                <br />
+                <img src="/static/images/{{ class_name }}/{{example_image}}" />
+                <br>
+                <span class="eatable-text">{{ eatable_class.replace('_', ' ') }}</span><br />
+                <a href="{{wiki_link}}">More info on wikipedia</a>
+            </div>
+        </div>
+        <!--<div class="col-md-6">-->
+            <!--<div style="padding: 2px;" class="{{ eatable_class2 }}">-->
+                <!--<div class="predict-name-div">.. but often confused with .. "{{ latin_name2 }}"</div>-->
+                <!--<br />-->
+                <!--<img src="/static/images/{{ class_name2 }}/{{example_image2}}" />-->
+                <!--<br />-->
+                <!--<span class="eatable-text">{{ eatable_class2.replace('_', ' ') }}</span><br />-->
+                <!--<a href="{{wiki_link2}}">More info on wikipedia</a>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>
+
+<style>
+    .predict-name-div {
+        min-height: 60px;
+    }
+    .eatable {
+        padding: 5px;
+    }
+    .not_eatable > img {
+        border: 3px solid #B32A63;
+    }
+    .eatable > .eatable-text {
+        color: #096943;
+    }
+    .not_eatable {
+        padding: 5px;
+    }
+    .not_eatable > .eatable-text {
+        color: #B32A63;
+    }
+    .eatable-text {
+        font-size: 30px;
+    }
+    .predict-name-div {
+        padding-top: 10px;
+    }
+</style>
