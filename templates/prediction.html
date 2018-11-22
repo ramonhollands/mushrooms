@@ -1,29 +1,67 @@
 <div class="container-fluid" style="margin-bottom: 40px;">
 	<div class="row">
-        <div class="col-md-12">
-            <div style="padding: 2px;" class="{{ eatable_class }}">
-                <div class="predict-name-div"><b>Looks like the "{{ latin_name }}"</b></div>
-                <br />
-                <img src="/static/images/{{ class_name }}/{{example_image}}" />
+        {% for prediction in predictions[:1] %}
+        <div class="col-md-6">
+            <div style="padding: 2px;" class="{{ prediction.eatable_class }}">
+                <div class="predict-name-div"><b>Looks like the "{{ prediction.latin_name }}" ({{prediction.certainty}})</b></div>
+                <img width="400px" src="/static/user_images/{{ heatmap }}.png" />
                 <br>
-                <span class="eatable-text">{{ eatable_class.replace('_', ' ') }}</span><br />
-                <a href="{{wiki_link}}">More info on wikipedia</a>
+                <span class="eatable-text">{{ prediction.eatable_class.replace('_', ' ') }}</span><br />
+                <a href="{{prediction.wiki_link}}">More info on wikipedia</a>
             </div>
         </div>
-        <!--<div class="col-md-6">-->
-            <!--<div style="padding: 2px;" class="{{ eatable_class2 }}">-->
-                <!--<div class="predict-name-div">.. but often confused with .. "{{ latin_name2 }}"</div>-->
-                <!--<br />-->
-                <!--<img src="/static/images/{{ class_name2 }}/{{example_image2}}" />-->
-                <!--<br />-->
-                <!--<span class="eatable-text">{{ eatable_class2.replace('_', ' ') }}</span><br />-->
-                <!--<a href="{{wiki_link2}}">More info on wikipedia</a>-->
-            <!--</div>-->
-        <!--</div>-->
+        {% endfor %}
+        <div class="col-md-6">
+            <div style="padding: 2px;">
+                <div class="predict-name-div">Your image analyzed</div>
+                <img src="/static/user_images/{{ heatmap }}_heatmap.png" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12" style="text-align:left; margin-top: 20px;">
+            Other examples of the "{{ predictions[0].latin_name }}"
+        </div>
+    </div>
+    <div class="row">
+        {% for example in predictions[0].example_image %}
+        <div class="col-md-6">
+            <div style="padding: 2px;">
+                <img src="/static/images/{{ predictions[0].class_name }}/{{example}}" />
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-md-12" style="text-align:left; margin-top: 20px;">
+            Underneath, some lookalikes are presented:
+        </div>
+    </div>
+    <div class="row">
+        {% for prediction in predictions[1:] %}
+        <div class="col-md-6">
+            <div style="padding: 2px;" class="{{ prediction.eatable_class }}">
+                <div class="predict-name-div">The "{{ prediction.latin_name }}" ({{prediction.certainty}})</div>
+                <img src="/static/images/{{ prediction.class_name }}/{{prediction.example_image[0]}}" />
+                <br>
+                <span class="eatable-text">{{ prediction.eatable_class.replace('_', ' ') }}</span><br />
+                <a href="{{prediction.wiki_link}}">More info on wikipedia</a>
+            </div>
+        </div>
+        {% endfor %}
     </div>
 </div>
 
 <style>
+
+    img {
+        height: 300px;
+        width: 300px;
+    }
     .predict-name-div {
         min-height: 60px;
     }

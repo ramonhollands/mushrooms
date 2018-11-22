@@ -1,0 +1,50 @@
+<div class="container-fluid" style="margin-bottom: 40px;">
+	<div class="row">
+
+        <h3>Uhmm, that's not a mushroom, let me show your some examples:</h3>
+
+        <br />
+        <br />
+
+        {% for prediction in predictions[:2] %}
+        <div class="col-md-6">
+            <div style="padding: 2px;">
+                <img src="/static/images/{{ prediction.class_name }}/aaa.jpg" />
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+<style>
+
+    img {
+        height: 300px;
+        width: 300px;
+    }
+    .predict-name-div {
+        min-height: 60px;
+    }
+    .eatable {
+        padding: 5px;
+    }
+    .not_eatable > img {
+        border: 3px solid #B32A63;
+    }
+    .eatable > .eatable-text {
+        color: #096943;
+    }
+    .not_eatable {
+        padding: 5px;
+    }
+    .not_eatable > .eatable-text {
+        color: #B32A63;
+    }
+    .eatable-text {
+        font-size: 30px;
+    }
+    .predict-name-div {
+        padding-top: 10px;
+    }
+</style>

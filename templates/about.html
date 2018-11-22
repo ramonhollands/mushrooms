@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hmmm mushroom</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="background-color: #FEFCF6;">
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12" style="background-color: #168EA6; height: 60px;">
+		</div>
+	</div>
+    <div class="row">
+		<div class="col-md-12" style="color: #666666; padding-top: 60px; padding-bottom: 40px;">
+            <center><h2>What mushroom is that?</h2></center>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+		</div>
+		<div class="col-md-6">
+            <p>
+                This webapp detects the type of mushroom from a photograph. It works using machine learning; an algorithm that takes bunch of photos of different objects and works out how to distinguish them. The model was trained using the Deep Learning techniques in fastai; it's easier than it sounds.
+            </p>
+
+            <p>
+                <img src="{{ url_for('static', filename='canvas_grid.jpt') }}">
+            </p>
+
+            <p>
+                We distinguish the 100 most common mushroom types, thanks to wikipedia. For each type, the computer used 100 images. It get's the right mushroom in 3 out of 4 cases. If it's uncertain, it shows pictures of the ones uncertain about. This might not sound impressive, but some of the types are very similar and can only identified for sure by touching them.
+            </p>
+
+            <p>
+                Example:
+            </p>
+
+            <p>
+                Thanks to fastai for teaching world class image recognition in a few hours!
+            </p>
+        </div>
+		<div class="col-md-3">
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+
+
