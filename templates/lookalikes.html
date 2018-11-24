@@ -1,0 +1,18 @@
+ <div class="row">
+    <div class="col-md-12" style="text-align:left; margin-top: 20px;">
+        Underneath, some lookalikes are presented:
+    </div>
+</div>
+<div class="row">
+    {% for prediction in predictions[1:] %}
+    <div class="col-md-6">
+        <div style="padding: 2px;" class="{{ prediction.eatable_class }}">
+            <div class="predict-name-div">The "{{ prediction.latin_name }}" ({{prediction.certainty}})</div>
+            <img src="/static/images/{{ prediction.class_name }}/{{prediction.example_image[0]}}" />
+            <br>
+            <span class="eatable-text">{{ prediction.eatable_class.replace('_', ' ') }}</span><br />
+            <a href="{{prediction.wiki_link}}">More info on wikipedia</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,14 @@
+<div class="row" stye="margin-top:10px">
+    <div class="col-md-12" style="text-align:center; margin-top: 15px; margin-bottom:30px">
+        <h4>Other examples of the "{{ predictions[0].latin_name }}"</h4>
+    </div>
+</div>
+<div class="row">
+    {% for example in predictions[0].example_image %}
+    <div class="col-md-6">
+        <div style="padding: 2px;">
+            <img src="/static/images/{{ predictions[0].class_name }}/{{example}}" />
+        </div>
+    </div>
+    {% endfor %}
+</div>

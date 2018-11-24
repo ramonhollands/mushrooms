@@ -8,7 +8,7 @@ import base64
 import uuid
 
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from io import BytesIO
 import os
 
@@ -69,17 +69,34 @@ def predict_image_from_bytes(bytes):
     top_three = np.argsort(certainties)[::-1][:n]
     predictions = [get_class_info(i, classes, certainties[i], mr_df) for i in top_three]
 
-    if(certainties[top_three[:1]] < 0.6):
-        return render_template('no-mushroom.html',
+    if(certainties[top_three[:1]] < 0.4):
+        predict_html = render_template('no-mushroom.html',
                            predictions=predictions)
+        title = "Uhmm, that's not a mushroom"
+        subtitle = ''
+        return jsonify({
+            'predict_html': predict_html,
+            'title': predictions[0]['latin_name'],
+            'subtitle': 'Let me show your some examples'})
 
     random_user_file_name = str(uuid.uuid4().hex)
     heatmap_from_img(img, random_user_file_name)
 
-    # strings = ["%.2f" % loss for loss in losses.numpy()]
-    return render_template('prediction.html',
+    predict_html = render_template('prediction.html',
                            predictions=predictions,
                            heatmap=random_user_file_name)
+
+    example_html = render_template('examples.html', predictions=predictions)
+
+    lookalikes_html = render_template('lookalikes.html', predictions=predictions)
+
+    return jsonify({
+                    'predict_html': predict_html,
+                    'title': 'Looks like the ' + predictions[0]['latin_name'],
+                    'subtitle': 'Please check the example images below to be sure',
+                    'example_html': example_html,
+                    'lookalikes_html' : lookalikes_html
+    })
 
 def heatmap_from_img(img, random_user_file_name):
     img.save('static/user_images/'+random_user_file_name+'.png')
